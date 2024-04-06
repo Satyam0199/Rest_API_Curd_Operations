@@ -1,8 +1,21 @@
 package com.rest.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
+@Entity
+@Table(name = "user_details")
 public class User {
+	
+	@Id
 	private String userId;
+	public User() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	private String name;
 	private String address;
 	public String getUserId() {
